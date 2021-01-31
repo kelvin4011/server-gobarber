@@ -15,6 +15,7 @@ export default class UsersController {
       email,
       password,
     });
+    console.log(user);
 
     return response.json(classToClass(user));
   }
