@@ -3,10 +3,8 @@ console.log('vc esta usando a url: ', process.env.DATABASE_URL);
 module.exports = {
   "type": "postgres",
   "url": process.env.DATABASE_URL,
-  dialectOptions: {
-    ssl: {
-      rejectUnauthorized: true
-    }
+  "ssl": {
+    rejectUnauthorized: false
   },
   "entities": [
     "dist/modules/**/infra/typeorm/entities/*.js"
