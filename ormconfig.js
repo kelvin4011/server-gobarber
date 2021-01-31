@@ -1,4 +1,4 @@
-
+console.log(process.env.DATABASE_URL);
 module.exports = {
   "type": "postgres",
   "url": process.env.DATABASE_URL,
@@ -11,6 +11,11 @@ module.exports = {
   "cli": {
     "migrationsDir": "./src/shared/infra/typeorm/migrations"
   }
+},
+{
+  "host": process.env.REDIS_HOST,
+  "port": process.env.REDIS_PORT,
+  "password": process.env.REDIS_PASS || undefined,
 },
 {
   "name": "mongo",
